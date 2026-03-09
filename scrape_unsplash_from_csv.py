@@ -124,17 +124,25 @@ def run(
     output_dir: Path,
     headless: bool = False,
     slow_mo: int = 150,
+    reuse_existing: bool = True,
 ) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
 
     with open(csv_path, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
-        if column not in (reader.fieldnames or []):
-            raise SystemExit(f"Column '{column}' not found in CSV. Available: {reader.fieldnames}")
+        fieldnames = list(reader.fieldnames or [])
+        if "featured_img" not in fieldnames:
+            fieldnames.append("featured_img")
+        if column not in fieldnames:
+            raise SystemExit(f"Column '{column}' not found in CSV. Available: {fieldnames}")
         rows = list(reader)
 
     if not rows:
         raise SystemExit("CSV has no data rows.")
+
+    # Ensure featured_img key exists for every row (preserve existing or default to empty)
+    for row in rows:
+        row.setdefault("featured_img", "")
 
     with sync_playwright() as p:
         browser = p.chromium.launch(
@@ -161,8 +169,12 @@ def run(
             safe_name = sanitize_filename(value)
             out_file = output_dir / f"{safe_name}.jpeg"
             if out_file.exists():
-                print(f"[{i+1}/{len(rows)}] Skip (exists): {out_file.name}")
-                continue
+                if reuse_existing:
+                    print(f"[{i+1}/{len(rows)}] Reuse existing: {out_file.name}")
+                    row["featured_img"] = out_file.name
+                    continue
+                else:
+                    print(f"[{i+1}/{len(rows)}] Overwriting existing file: {out_file.name}")
 
             search_query = urllib.parse.quote(value)
             url = UNSPLASH_SEARCH_TEMPLATE.format(search_query)
@@ -176,10 +188,13 @@ def run(
 
                 ok = save_first_result_via_large_view(page, out_file, url)
                 if ok:
+                    row["featured_img"] = out_file.name
                     print(f"  -> Saved: {out_file}")
                 else:
+                    row["featured_img"] = ""
                     print(f"  -> No first image found or screenshot failed.")
             except Exception as e:
+                row["featured_img"] = ""
                 print(f"  -> Error: {e}")
 
             if i < len(rows) - 1:
@@ -187,6 +202,13 @@ def run(
 
         context.close()
         browser.close()
+
+    # Write CSV back with featured_img column updated
+    with open(csv_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
+    print(f"Updated CSV with featured_img column: {csv_path}")
 
 
 def main() -> None:
@@ -223,6 +245,15 @@ def main() -> None:
         metavar="MS",
         help="Playwright slow_mo in ms (default: 150)",
     )
+    parser.add_argument(
+        "--reuse-existing",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help=(
+            "Reuse existing images in the output directory if present "
+            "(default: True). Use --no-reuse-existing to always fetch a new image."
+        ),
+    )
     args = parser.parse_args()
     run(
         csv_path=args.csv,
@@ -230,6 +261,7 @@ def main() -> None:
         output_dir=args.output_dir,
         headless=args.headless,
         slow_mo=args.slow,
+        reuse_existing=args.reuse_existing,
     )
 
 

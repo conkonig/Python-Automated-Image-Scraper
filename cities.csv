@@ -1,0 +1,31 @@
+title,slug,city,province,country,latitude,longitude,population,tourism_note,nearby_cities,featured_img
+Amsterdam,amsterdam,Amsterdam,North Holland,Netherlands,52.3676,4.9041,920000,The nightlife capital of the Netherlands and a major destination for stag parties and group celebrations.,"Haarlem,Zaandam,Amstelveen,Hilversum",Amsterdam.jpeg
+Rotterdam,rotterdam,Rotterdam,South Holland,Netherlands,51.9244,4.4777,660000,"A vibrant modern city known for nightlife, bars and large group celebrations.","Delft,Schiedam,The Hague,Spijkenisse",Rotterdam.jpeg
+The Hague,the-hague,The Hague,South Holland,Netherlands,52.0705,4.3007,560000,An international city with busy nightlife and many group events and celebrations.,"Delft,Leiden,Rijswijk,Zoetermeer",The_Hague.jpeg
+Utrecht,utrecht,Utrecht,Utrecht,Netherlands,52.0907,5.1214,360000,"A lively student city famous for packed bars, nightlife and bachelor party weekends.","Amersfoort,Zeist,Houten,Nieuwegein",Utrecht.jpeg
+Eindhoven,eindhoven,Eindhoven,North Brabant,Netherlands,51.4416,5.4697,240000,"One of the biggest party cities in the south with festivals, nightlife and group celebrations.","Helmond,Veldhoven,Tilburg,Den Bosch",Eindhoven.jpeg
+Tilburg,tilburg,Tilburg,North Brabant,Netherlands,51.5555,5.0913,220000,A vibrant student city with strong nightlife and many party events.,"Breda,Eindhoven,Waalwijk,Den Bosch",Tilburg.jpeg
+Breda,breda,Breda,North Brabant,Netherlands,51.5719,4.7683,185000,A popular nightlife destination in the south known for lively group celebrations.,"Tilburg,Oosterhout,Etten-Leur,Roosendaal",Breda.jpeg
+Groningen,groningen,Groningen,Groningen,Netherlands,53.2194,6.5665,235000,A major student city with one of the most energetic nightlife scenes in the country.,"Assen,Hoogezand,Veendam,Leek",Groningen.jpeg
+Maastricht,maastricht,Maastricht,Limburg,Netherlands,50.8514,5.6900,121000,"A historic southern city popular for tourism, nightlife and group celebrations.","Heerlen,Sittard,Valkenburg,Roermond",Maastricht.jpeg
+Nijmegen,nijmegen,Nijmegen,Gelderland,Netherlands,51.8426,5.8528,180000,A lively university city with vibrant nightlife and group events.,"Arnhem,Wijchen,Elst,Cuijk",Nijmegen.jpeg
+Arnhem,arnhem,Arnhem,Gelderland,Netherlands,51.9851,5.8987,160000,A popular nightlife destination in Gelderland with many group celebrations.,"Nijmegen,Ede,Zevenaar,Duiven",Arnhem.jpeg
+Leiden,leiden,Leiden,South Holland,Netherlands,52.1601,4.4970,125000,A historic university city with lively bars and nightlife.,"The Hague,Zoetermeer,Katwijk,Alphen aan den Rijn",Leiden.jpeg
+Zwolle,zwolle,Zwolle,Overijssel,Netherlands,52.5168,6.0830,130000,A growing nightlife city with frequent celebrations and group events.,"Kampen,Deventer,Meppel,Hattem",Zwolle.jpeg
+Den Bosch,den-bosch,Den Bosch,North Brabant,Netherlands,51.6978,5.3037,157000,"A vibrant southern city known for nightlife, festivals and celebrations.","Eindhoven,Tilburg,Oss,Vught",Den_Bosch.jpeg
+Almere,almere,Almere,Flevoland,Netherlands,52.3508,5.2647,218000,A large modern city near Amsterdam with many private parties and celebrations.,"Lelystad,Hilversum,Amsterdam,Amersfoort",Almere.jpeg
+Amersfoort,amersfoort,Amersfoort,Utrecht,Netherlands,52.1561,5.3878,160000,A historic city with lively nightlife and many group celebrations.,"Utrecht,Soest,Barneveld,Veenendaal",Amersfoort.jpeg
+Apeldoorn,apeldoorn,Apeldoorn,Gelderland,Netherlands,52.2112,5.9699,165000,A large city in Gelderland with nightlife and entertainment options.,"Arnhem,Deventer,Zutphen,Ede",Apeldoorn.jpeg
+Enschede,enschede,Enschede,Overijssel,Netherlands,52.2215,6.8937,159000,A vibrant university city with energetic nightlife and student parties.,"Hengelo,Almelo,Oldenzaal,Gronau",Enschede.jpeg
+Haarlem,haarlem,Haarlem,North Holland,Netherlands,52.3874,4.6462,162000,A historic city near Amsterdam with lively nightlife and tourism.,"Amsterdam,Hoofddorp,Zaandam,IJmuiden",Haarlem.jpeg
+Amstelveen,amstelveen,Amstelveen,North Holland,Netherlands,52.3080,4.8730,92000,A busy suburb of Amsterdam with many private events and celebrations.,"Amsterdam,Aalsmeer,Uithoorn,Hoofddorp",Amstelveen.jpeg
+Zaandam,zaandam,Zaandam,North Holland,Netherlands,52.4385,4.8260,76000,A lively town near Amsterdam with group celebrations and nightlife.,"Amsterdam,Purmerend,Haarlem,Wormerveer",Zaandam.jpeg
+Hoofddorp,hoofddorp,Hoofddorp,North Holland,Netherlands,52.3025,4.6886,78000,A busy city near Schiphol Airport with many private party events.,"Amsterdam,Haarlem,Aalsmeer,Amstelveen",Hoofddorp.jpeg
+Delft,delft,Delft,South Holland,Netherlands,52.0116,4.3571,104000,A historic university town with lively nightlife and student events.,"The Hague,Rotterdam,Rijswijk,Pijnacker",Delft.jpeg
+Zoetermeer,zoetermeer,Zoetermeer,South Holland,Netherlands,52.0607,4.4940,125000,A large suburb between Rotterdam and The Hague with many celebrations.,"The Hague,Leiden,Delft,Gouda",Zoetermeer.jpeg
+Leidschendam,leidschendam,Leidschendam,South Holland,Netherlands,52.0900,4.3970,75000,A town near The Hague with nightlife and party bookings.,"The Hague,Voorburg,Zoetermeer,Delft",Leidschendam.jpeg
+Helmond,helmond,Helmond,North Brabant,Netherlands,51.4817,5.6611,92000,A lively southern city near Eindhoven with nightlife and celebrations.,"Eindhoven,Deurne,Asten,Geldrop",Helmond.jpeg
+Roermond,roermond,Roermond,Limburg,Netherlands,51.1942,5.9875,59000,A popular tourism city known for shopping and nightlife.,"Maastricht,Venlo,Sittard,Echt",Roermond.jpeg
+Venlo,venlo,Venlo,Limburg,Netherlands,51.3704,6.1724,101000,A lively border city with nightlife and group celebrations.,"Roermond,Venray,Horst,Blerick",Venlo.jpeg
+Assen,assen,Assen,Drenthe,Netherlands,52.9928,6.5642,68000,A provincial capital with nightlife and entertainment.,"Groningen,Emmen,Hoogeveen,Beilen",Assen.jpeg
+Deventer,deventer,Deventer,Overijssel,Netherlands,52.2550,6.1639,100000,"A historic city with nightlife, festivals and celebrations.","Apeldoorn,Zutphen,Zwolle,Olst",Deventer.jpeg
